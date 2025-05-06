@@ -17,6 +17,7 @@ The platform supports various service categories including Plumbing, Electricity
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Running the Application](#running-the-application)
+  - [Running with Docker](#running-with-docker)
 - [Features](#features)
 - [Database Models](#database-models)
 - [Contributors](#contributors)
@@ -30,6 +31,7 @@ Before setting up the project, make sure you have the following installed:
 - Python 3.8 or higher
 - pip (Python package manager)
 - Git
+- Docker and Docker Compose (for Docker setup)
 
 ### Installation
 
@@ -81,6 +83,44 @@ Before setting up the project, make sure you have the following installed:
 2. Access the application in your browser at `http://127.0.0.1:8000/`
 
 3. To access the admin panel, go to `http://127.0.0.1:8000/admin/` and log in with your superuser credentials
+
+### Running with Docker
+
+1. Make sure you have Docker and Docker Compose installed on your system.
+
+2. Clone the repository and navigate to the project directory:
+   ```bash
+   git clone https://learn.zone01kisumu.ke/git/fgitonga/netfix
+   cd netfix
+   ```
+
+3. Make the run script executable:
+   ```bash
+   chmod +x run.sh
+   ```
+
+4. Run the application using Docker:
+   ```bash
+   ./run.sh
+   ```
+   Or alternatively:
+   ```bash
+   docker-compose up --build
+   ```
+
+5. The application will be available at `http://localhost:8000`
+
+6. To stop the application, press `Ctrl+C` in the terminal where Docker is running.
+
+7. To run the application in detached mode (in the background):
+   ```bash
+   docker-compose up -d
+   ```
+
+8. To stop the application when running in detached mode:
+   ```bash
+   docker-compose down
+   ```
 
 ## Features
 
