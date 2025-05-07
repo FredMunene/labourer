@@ -84,7 +84,7 @@ Before setting up the project, make sure you have the following installed:
 
 3. To access the admin panel, go to `http://127.0.0.1:8000/admin/` and log in with your superuser credentials
 
-### Running with Docker
+### Running with Docker Compose
 
 1. Make sure you have Docker and Docker Compose installed on your system.
 
@@ -104,23 +104,24 @@ Before setting up the project, make sure you have the following installed:
    ./run.sh
    ```
    Or alternatively:
-   ```bash
-   docker-compose up --build
-   ```
+   1. Build the container
+      ```bash
+      docker build -t labourer_web .
+      ```
+   2. Run the container
+      ```bash
+      docker run -d -p 8000:8000 --name labourer_web labourer_web
+      ```
+5. Accessing bash
+      ```bash
+      docker exec -it <container_id> bash
+      ```
+
 
 5. The application will be available at `http://localhost:8000`
 
 6. To stop the application, press `Ctrl+C` in the terminal where Docker is running.
 
-7. To run the application in detached mode (in the background):
-   ```bash
-   docker-compose up -d
-   ```
-
-8. To stop the application when running in detached mode:
-   ```bash
-   docker-compose down
-   ```
 
 ## Features
 
