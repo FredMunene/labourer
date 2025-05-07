@@ -84,7 +84,7 @@ Before setting up the project, make sure you have the following installed:
 
 3. To access the admin panel, go to `http://127.0.0.1:8000/admin/` and log in with your superuser credentials
 
-### Running with Docker Compose
+### Running with Docker
 
 1. Make sure you have Docker and Docker Compose installed on your system.
 
